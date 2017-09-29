@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    Keep track of your strains
+
+    <form action="/strains" method="post">
+        <input type="date" placeholder="date" name="date">
+        <input type="text" placeholder="strain" name="strain">
+        <button type="submit">Submit</button>
+    </form>
+
+    <ul class="strains">
+            <% for(var i = 0; i < strains.length; i++) { %>
+                <li class="strain">
+                    <span><%= strains[i].date %></span>
+                    <span><%= strains[i].strain %></span>
+                </li>
+            <% } %>
+    </ul>
+                
+    
+</body>
+</html>
+

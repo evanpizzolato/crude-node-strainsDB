@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Strain Track</title>
 </head>
 <body>
 
@@ -13,19 +13,33 @@
     <form action="/strains" method="post">
         <input type="date" placeholder="date" name="date">
         <input type="text" placeholder="strain" name="strain">
+        <input type="text" placeholder="thoughts" name="thoughts">
         <button type="submit">Submit</button>
     </form>
 
+    <div>
+        <h2>Replace the last strain with a random one</h2>
+        <button id="update">A Surprise</button>
+    </div>
+
+    <div>
+        <h2>Delete first 'good' strain</h2>
+        <button id="delete">DELETE A 'GOOD' STRAIN</button>
+    </div>
+
+
+    <h2>All Strains</h2>
     <ul class="strains">
             <% for(var i = 0; i < strains.length; i++) { %>
                 <li class="strain">
                     <span><%= strains[i].date %></span>
                     <span><%= strains[i].strain %></span>
+                    <span><%= strains[i].thoughts %></span>
                 </li>
             <% } %>
     </ul>
                 
-    
+ <script src="main.js"></script>   
 </body>
 </html>
 

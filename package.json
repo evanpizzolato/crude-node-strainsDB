@@ -9,12 +9,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+git@github.com:evanpizzolato/crude-node-strainsDB.git"
+    "url": 
   },
   "author": "Evan Pizzolato",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/evanpizzolato/crude-node-strainsDB/issues"
+    "url": 
   },
   "homepage": "https://github.com/evanpizzolato/crude-node-strainsDB#readme",
   "dependencies": {

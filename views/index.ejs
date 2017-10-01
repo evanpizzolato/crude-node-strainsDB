@@ -18,23 +18,43 @@
     
 
     <form action="/strains" method="post">
-        <input type="text" placeholder="strain" name="strain">
-        <select name="type">
-            <option value="choose">Choose...</option>
-            <option value="sativa">Sativa</option>
-            <option value="hybrid">Hybrid</option>
-            <option value="kush">Kush</option>
-        </select>
-        <select name="thoughts">
-            <option value="choose">Choose...</option>
-            <option value="hate">Hate It</option>
-            <option value="fine">Fine</option>
-            <option value="good">Good</option>
-            <option value="love">Love It</option>
-        </select>
-        <input type="date" placeholder="date" name="date">
-        <textarea placeholder="Additional Info" name="more"></textarea>
-        <button type="submit">Submit</button>
+        <div class="row">
+            <div class="six columns">
+                <label for="strainInput">Strain</label>
+                <input class="u-full-width" type="text" placeholder="Name" name="strain">
+            </div>
+
+            <div class="six columns">
+                <label for="typeInput">Type</label>
+                <select class="u-full-width" name="type">
+                    <option value="choose">Choose...</option>
+                    <option value="sativa">Sativa</option>
+                    <option value="hybrid">Hybrid</option>
+                    <option value="kush">Kush</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="six columns">  
+                <label for="thoughtsInput">Thoughts</label>          
+                <select class="u-full-width" name="thoughts">
+                    <option value="choose">Choose...</option>
+                    <option value="hate">Hate It</option>
+                    <option value="fine">Fine</option>
+                    <option value="good">Good</option>
+                    <option value="love">Love It</option>
+                </select>
+            </div>
+
+            <div class="six columns">
+                <label for="dateInput">Date</label> 
+                <input class="u-full-width" type="date" placeholder="date" name="date">
+            </div>
+
+        </div>
+        <label for="moreInput">More</label>
+        <textarea class="u-full-width" placeholder="Additional Info" name="more"></textarea>
+        <button class="button-primary" type="submit">Submit</button>
     </form>
 
     <div>
@@ -52,9 +72,11 @@
     <ul class="strains">
             <% for(var i = 0; i < strains.length; i++) { %>
                 <li class="strain">
-                    <span><%= strains[i].date %></span>
                     <span><%= strains[i].strain %></span>
+                    <span><%= strains[i].type %></span>
                     <span><%= strains[i].thoughts %></span>
+                    <span><%= strains[i].date %></span>
+                    <span><%= strains[i].more %></span>
                 </li>
             <% } %>
     </ul>

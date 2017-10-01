@@ -69,17 +69,41 @@
 
 
     <h2>All Strains</h2>
-    <ul class="strains">
-            <% for(var i = 0; i < strains.length; i++) { %>
-                <li class="strain">
-                    <span><%= strains[i].strain %></span>
-                    <span><%= strains[i].type %></span>
-                    <span><%= strains[i].thoughts %></span>
-                    <span><%= strains[i].date %></span>
-                    <span><%= strains[i].more %></span>
-                </li>
-            <% } %>
-    </ul>
+
+    <table class="u-full-width strains-output">
+        <thead>
+            <tr>
+                <th>Strain</th>
+                <th>Type</th>
+                <th>Thoughts</th>
+                <th>Date</th>
+                <th>More...</th>
+            </tr>
+        </thead>
+        
+        <tbody>
+        <% for(var i = 0; i < strains.length; i++) { %>
+            <tr>
+                <td><%= strains[i].strain %></td>
+                <td><%= strains[i].type %></td>
+                <td><%= strains[i].thoughts %></td>
+                <td><%= strains[i].date %></td>
+                <td><%= strains[i].more %></td>
+            </tr>
+        <% } %>
+        </tbody>
+            
+    </table>
+
+    <!-- <% for(var i = 0; i < strains.length; i++) { %>
+    //             <li class="strain">
+    //                 <span><%= strains[i].strain %></span>
+    //                 <span><%= strains[i].type %></span>
+    //                 <span><%= strains[i].thoughts %></span>
+    //                 <span><%= strains[i].date %></span>
+    //                 <span><%= strains[i].more %></span>
+    //             </li>
+    //         <% } %> -->
                 
  <script src="main.js"></script>   
 </body>

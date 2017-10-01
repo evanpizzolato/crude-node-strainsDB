@@ -4,16 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="skeleton.css">
+    <link rel="stylesheet" href="normalize.css">
     <title>Strain Track</title>
 </head>
 <body>
 
-    <h1>Keep track of your strains</h1>
+    <header>
+        <h1>Strain Track 🌿</h1>
+        <p>Keep track of all the strains you’ve come accross</p>
+    </header>
+    
 
     <form action="/strains" method="post">
-        <input type="date" placeholder="date" name="date">
         <input type="text" placeholder="strain" name="strain">
-        <input type="text" placeholder="thoughts" name="thoughts">
+        <select name="type">
+            <option value="choose">Choose...</option>
+            <option value="sativa">Sativa</option>
+            <option value="hybrid">Hybrid</option>
+            <option value="kush">Kush</option>
+        </select>
+        <select name="thoughts">
+            <option value="choose">Choose...</option>
+            <option value="hate">Hate It</option>
+            <option value="fine">Fine</option>
+            <option value="good">Good</option>
+            <option value="love">Love It</option>
+        </select>
+        <input type="date" placeholder="date" name="date">
+        <textarea placeholder="Additional Info" name="more"></textarea>
         <button type="submit">Submit</button>
     </form>
 
